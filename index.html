@@ -3,192 +3,460 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
   <title>Jichun Wang | Academic Homepage</title>
-  <meta name="description" content="Academic homepage of Jichun Wang. Research, publications, and curriculum vitae.">
+  <meta name="description"
+        content="Jichun Wang, Master's Student at Nanjing Agricultural University. Research in agricultural economics and land prices.">
+
   <style>
+    :root {
+      --navy: #17365d;
+      --blue: #29638b;
+      --text: #303b47;
+      --muted: #697687;
+      --line: #e4e9ef;
+      --background: #ffffff;
+      --light: #f7f9fc;
+    }
+
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #263445;
-      background: #ffffff;
-      line-height: 1.75;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, "Microsoft YaHei",
+        sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.8;
     }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
 
     header {
-      border-bottom: 1px solid #e5e7eb;
-      background: #f8fafc;
+      background: var(--light);
+      border-bottom: 1px solid var(--line);
     }
 
-    nav {
-      max-width: 1000px;
+    .nav-container {
+      max-width: 1040px;
       margin: auto;
-      padding: 18px 24px;
+      padding: 20px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 15px;
     }
 
     .brand {
-      font-size: 21px;
-      font-weight: bold;
-      color: #17365d;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 23px;
     }
 
-    nav a {
-      color: #34465a;
-      text-decoration: none;
-      margin-left: 18px;
-    }
-
-    a { color: #2165a3; }
-    a:hover { text-decoration: underline; }
-
-    main {
-      max-width: 950px;
-      margin: 55px auto;
-      padding: 0 24px;
-    }
-
-    .profile {
+    .nav-links {
       display: flex;
-      gap: 35px;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
     }
 
-    .portrait {
-      width: 170px;
-      height: 210px;
-      object-fit: cover;
-      border-radius: 6px;
-      background: #edf2f7;
-    }
-
-    h1 {
-      font-size: 34px;
-      color: #17365d;
-      margin: 0 0 8px;
-    }
-
-    h2 {
-      margin-top: 50px;
-      padding-bottom: 8px;
-      color: #17365d;
-      font-size: 24px;
-      border-bottom: 1px solid #dce3eb;
-    }
-
-    h3 { margin-bottom: 6px; }
-    p { margin-top: 8px; }
-    .muted { color: #64748b; }
-    .paper { margin: 22px 0; }
-
-    footer {
-      margin-top: 60px;
-      padding: 24px;
-      border-top: 1px solid #e5e7eb;
-      text-align: center;
-      color: #64748b;
+    .nav-links a {
+      color: #425368;
       font-size: 14px;
     }
 
+    .language-button {
+      background: white;
+      border: 1px solid #cbd5e1;
+      color: var(--navy);
+      border-radius: 5px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    main {
+      max-width: 940px;
+      margin: 55px auto;
+      padding: 0 30px;
+    }
+
+    .intro {
+      display: flex;
+      gap: 36px;
+      align-items: flex-start;
+    }
+
+    .intro-text { flex: 1; }
+
+    .portrait {
+      width: 170px;
+      height: 215px;
+      background: #edf1f5;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: var(--navy);
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .chinese-name {
+      font-size: 21px;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    .affiliation {
+      margin-top: 18px;
+      font-size: 16px;
+    }
+
+    .research-label {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 23px;
+      margin-top: 50px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+      color: #263e57;
+    }
+
+    p { margin: 10px 0; }
+
+    .paper {
+      margin: 22px 0;
+      padding-left: 16px;
+      border-left: 3px solid #b9ccdf;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ecf2f8;
+      color: #355b80;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin: 5px 7px 5px 0;
+      font-size: 13px;
+    }
+
+    .info-box {
+      padding: 18px 22px;
+      background: var(--light);
+      border-radius: 6px;
+      margin-top: 18px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 70px;
+      padding: 25px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    [data-lang="zh"] { display: none; }
+
+    body.zh [data-lang="en"] { display: none; }
+    body.zh [data-lang="zh"] { display: revert; }
+
     @media (max-width: 650px) {
-      .profile { flex-direction: column; }
-      nav a { margin: 0 12px 0 0; }
-      main { margin-top: 30px; }
+      .nav-container { padding: 18px 20px; }
+      .nav-links { gap: 12px; }
+
+      main {
+        margin: 30px auto;
+        padding: 0 20px;
+      }
+
+      .intro {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      h1 { font-size: 30px; }
+      .portrait { width: 140px; height: 180px; }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Navigation -->
   <header>
-    <nav>
+    <nav class="nav-container">
       <div class="brand">Jichun Wang</div>
-      <div>
-        <a href="#home">Home</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#education">Education</a>
         <a href="#cv">CV</a>
-        <a href="#notes">Notes</a>
         <a href="#contact">Contact</a>
+
+        <button class="language-button"
+                id="langSwitch"
+                type="button"
+                onclick="switchLanguage()">
+          中文
+        </button>
       </div>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="profile">
-      <div>
+
+    <!-- Profile -->
+    <section class="intro" id="about">
+
+      <div class="intro-text">
+
         <h1>Jichun Wang</h1>
-        <p class="muted">Economics Researcher</p>
-        <p>
-          Welcome to my academic website.
-          My research interests include agricultural
-          economics, development economics, and
-          applied microeconomics.
+        <div class="chinese-name">汪季春</div>
+
+        <p class="affiliation">
+          <span data-lang="en">
+            Master's Student<br>
+            Nanjing Agricultural University
+          </span>
+          <span data-lang="zh">
+            硕士研究生<br>
+            南京农业大学
+          </span>
         </p>
+
+        <p class="research-label">
+          <span data-lang="en">Research Interests</span>
+          <span data-lang="zh">研究兴趣</span>
+        </p>
+
+        <div>
+          <span class="tag">Agricultural Economics</span>
+          <span class="tag">Land Prices</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Biography -->
+    <section>
+      <h2>
+        <span data-lang="en">About Me</span>
+        <span data-lang="zh">关于我</span>
+      </h2>
+
+      <div data-lang="en">
         <p>
-          This website contains information about
-          my research, academic activities,
-          and working papers.
+          I am a master's student at Nanjing
+          Agricultural University, China.
+        </p>
+
+        <p>
+          My research interests lie in agricultural
+          economics, with a particular focus on
+          land prices and related economic issues.
+        </p>
+
+        <p>
+          This website provides information about
+          my research, academic background,
+          and ongoing projects.
+        </p>
+      </div>
+
+      <div data-lang="zh">
+        <p>
+          我目前是南京农业大学的一名硕士研究生。
+        </p>
+
+        <p>
+          我的研究兴趣主要集中于农业经济学，
+          尤其关注土地价格及其相关经济问题。
+        </p>
+
+        <p>
+          本网站主要用于展示我的研究成果、
+          学术经历以及正在开展的研究项目。
         </p>
       </div>
     </section>
 
+    <!-- Research -->
     <section id="research">
-      <h2>Research</h2>
-      <h3>Working Papers</h3>
+      <h2>
+        <span data-lang="en">Research</span>
+        <span data-lang="zh">学术研究</span>
+      </h2>
+
+      <h3>
+        <span data-lang="en">Research Interests</span>
+        <span data-lang="zh">研究方向</span>
+      </h3>
+
+      <p>
+        Agricultural Economics · Land Prices
+      </p>
+
+      <h3>
+        <span data-lang="en">Working Papers</span>
+        <span data-lang="zh">工作论文</span>
+      </h3>
+
       <div class="paper">
-        <strong>Working Paper Title</strong>
-        <p class="muted">
-          Author(s), Year
-        </p>
-        <p>
-          Abstract and PDF link will be added here.
+        <p class="meta">
+          <span data-lang="en">
+            Working papers will be added here.
+          </span>
+          <span data-lang="zh">
+            工作论文将在此更新。
+          </span>
         </p>
       </div>
 
-      <h3>Publications</h3>
-      <p>To be updated.</p>
+      <h3>
+        <span data-lang="en">Publications</span>
+        <span data-lang="zh">已发表论文</span>
+      </h3>
+
+      <p class="meta">
+        <span data-lang="en">To be updated.</span>
+        <span data-lang="zh">待更新。</span>
+      </p>
     </section>
 
+    <!-- Education -->
+    <section id="education">
+      <h2>
+        <span data-lang="en">Education</span>
+        <span data-lang="zh">教育背景</span>
+      </h2>
+
+      <div class="info-box">
+        <strong>Nanjing Agricultural University</strong>
+
+        <p>
+          <span data-lang="en">
+            Master's Student
+          </span>
+          <span data-lang="zh">
+            南京农业大学 · 硕士研究生
+          </span>
+        </p>
+
+        <p class="meta">
+          Nanjing, China
+        </p>
+      </div>
+    </section>
+
+    <!-- CV -->
     <section id="cv">
-      <h2>Curriculum Vitae</h2>
+      <h2>
+        <span data-lang="en">
+          Curriculum Vitae
+        </span>
+        <span data-lang="zh">
+          学术简历
+        </span>
+      </h2>
+
       <p>
-        <a href="cv.pdf" target="_blank"
-           rel="noopener noreferrer">
-          Download my CV (PDF)
-        </a>
+        <span data-lang="en">
+          My academic CV will be available here.
+        </span>
+        <span data-lang="zh">
+          学术简历将在此提供下载。
+        </span>
       </p>
     </section>
 
-    <section id="notes">
-      <h2>Research Notes</h2>
-      <p>
-        Notes on economics, econometrics,
-        academic papers, and research methods.
-      </p>
-      <p>Coming soon.</p>
-    </section>
-
+    <!-- Contact -->
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: To be updated</p>
+      <h2>
+        <span data-lang="en">Contact</span>
+        <span data-lang="zh">联系方式</span>
+      </h2>
+
       <p>
-        GitHub:
-        <a href="https://github.com/JOehxx">
+        <strong>Email:</strong>
+        <span class="meta">To be updated</span>
+      </p>
+
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/JOehxx"
+           target="_blank"
+           rel="noopener noreferrer">
           github.com/JOehxx
         </a>
       </p>
     </section>
+
   </main>
 
   <footer>
-    © 2026 Jichun Wang.
-    Hosted on GitHub Pages.
+    © 2026 Jichun Wang ·
+    Nanjing Agricultural University<br>
+    Hosted on GitHub Pages
   </footer>
+
+  <script>
+    function switchLanguage() {
+      const isChinese =
+        document.body.classList.toggle("zh");
+
+      document.documentElement.lang =
+        isChinese ? "zh-CN" : "en";
+
+      document.getElementById("langSwitch")
+        .textContent = isChinese ? "English" : "中文";
+
+      localStorage.setItem(
+        "preferredLanguage",
+        isChinese ? "zh" : "en"
+      );
+    }
+
+    if (
+      localStorage.getItem("preferredLanguage") === "zh"
+    ) {
+      document.body.classList.add("zh");
+      document.documentElement.lang = "zh-CN";
+      document.getElementById("langSwitch")
+        .textContent = "English";
+    }
+  </script>
+
 </body>
 </html>
