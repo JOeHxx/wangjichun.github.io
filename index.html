@@ -1,13 +1,194 @@
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>汪季春的个人博客</title>
+  <title>Jichun Wang | Academic Homepage</title>
+  <meta name="description" content="Academic homepage of Jichun Wang. Research, publications, and curriculum vitae.">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #263445;
+      background: #ffffff;
+      line-height: 1.75;
+    }
+
+    header {
+      border-bottom: 1px solid #e5e7eb;
+      background: #f8fafc;
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: bold;
+      color: #17365d;
+    }
+
+    nav a {
+      color: #34465a;
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    a { color: #2165a3; }
+    a:hover { text-decoration: underline; }
+
+    main {
+      max-width: 950px;
+      margin: 55px auto;
+      padding: 0 24px;
+    }
+
+    .profile {
+      display: flex;
+      gap: 35px;
+      align-items: flex-start;
+    }
+
+    .portrait {
+      width: 170px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: #edf2f7;
+    }
+
+    h1 {
+      font-size: 34px;
+      color: #17365d;
+      margin: 0 0 8px;
+    }
+
+    h2 {
+      margin-top: 50px;
+      padding-bottom: 8px;
+      color: #17365d;
+      font-size: 24px;
+      border-bottom: 1px solid #dce3eb;
+    }
+
+    h3 { margin-bottom: 6px; }
+    p { margin-top: 8px; }
+    .muted { color: #64748b; }
+    .paper { margin: 22px 0; }
+
+    footer {
+      margin-top: 60px;
+      padding: 24px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 650px) {
+      .profile { flex-direction: column; }
+      nav a { margin: 0 12px 0 0; }
+      main { margin-top: 30px; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>欢迎来到我的个人博客</h1>
-  <p>这里记录我的研究、学习和生活。</p>
+  <header>
+    <nav>
+      <div class="brand">Jichun Wang</div>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#cv">CV</a>
+        <a href="#notes">Notes</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="profile">
+      <div>
+        <h1>Jichun Wang</h1>
+        <p class="muted">Economics Researcher</p>
+        <p>
+          Welcome to my academic website.
+          My research interests include agricultural
+          economics, development economics, and
+          applied microeconomics.
+        </p>
+        <p>
+          This website contains information about
+          my research, academic activities,
+          and working papers.
+        </p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <h3>Working Papers</h3>
+      <div class="paper">
+        <strong>Working Paper Title</strong>
+        <p class="muted">
+          Author(s), Year
+        </p>
+        <p>
+          Abstract and PDF link will be added here.
+        </p>
+      </div>
+
+      <h3>Publications</h3>
+      <p>To be updated.</p>
+    </section>
+
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <p>
+        <a href="cv.pdf" target="_blank"
+           rel="noopener noreferrer">
+          Download my CV (PDF)
+        </a>
+      </p>
+    </section>
+
+    <section id="notes">
+      <h2>Research Notes</h2>
+      <p>
+        Notes on economics, econometrics,
+        academic papers, and research methods.
+      </p>
+      <p>Coming soon.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: To be updated</p>
+      <p>
+        GitHub:
+        <a href="https://github.com/JOehxx">
+          github.com/JOehxx
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Jichun Wang.
+    Hosted on GitHub Pages.
+  </footer>
 </body>
 </html>
